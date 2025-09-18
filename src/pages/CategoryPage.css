@@ -1,0 +1,18 @@
+.category-page {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.category-page__title {
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.category-page-status {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 4rem 1rem;
+  color: #6c757d;
+}

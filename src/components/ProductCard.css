@@ -1,0 +1,23 @@
+/* Custom styles for ProductCard */
+.product-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-card .card-img-top {
+  max-height: 220px;
+  object-fit: contain; /* Prevents the image from being stretched */
+  padding: 1.5rem;
+}
+
+.card-text-truncate {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* You can change this number to control the line count */
+}
