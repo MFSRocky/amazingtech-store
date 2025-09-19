@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { selectWishlistItems } from '../store/slices/wishlistSlice';
 import '../pages/CategoryPage.css'; 
-import '../pages/Cartpage.css'; 
+import '../pages/CartPage.css'; 
 
 export default function WishlistPage() {
   const wishlistItems = useSelector(selectWishlistItems);
