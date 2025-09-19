@@ -39,10 +39,10 @@ export default function Footer() {
             <h5 className="text-uppercase fw-bold">Follow Us</h5>
             <p>Stay connected for the latest updates and offers.</p>
             <div>
-              <a href="#!" className="text-white me-3 footer-icon"><Facebook /></a>
-              <a href="#!" className="text-white me-3 footer-icon"><Twitter /></a>
-              <a href="#!" className="text-white me-3 footer-icon"><Instagram /></a>
-              <a href="#!" className="text-white footer-icon"><Linkedin /></a>
+              <Link href="#!" className="text-white me-3 footer-icon"><Facebook /></Link>
+              <Link href="#!" className="text-white me-3 footer-icon"><Twitter /></Link>
+              <Link href="#!" className="text-white me-3 footer-icon"><Instagram /></Link>
+              <Link href="#!" className="text-white footer-icon"><Linkedin /></Link>
             </div>
           </Col>
         </Row>
