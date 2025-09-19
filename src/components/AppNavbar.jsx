@@ -9,12 +9,13 @@ import {
   Badge,
 } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { Store, Search, ShoppingCart } from "lucide-react";
+import { Store, Search, ShoppingCart, Heart } from "lucide-react";
 import { useSelector } from "react-redux";
 
 const navLinks = [
   { to: "/", text: "Home" },
   { to: "/about", text: "About" },
+  { to: "/wishlist", text: "Favorites" },
   { to: "/services", text: "Services" },
   { to: "/contact", text: "Contact" },
 ];
@@ -51,6 +52,7 @@ const CategoriesDropdown = () => (
 
 const SearchAndCart = () => {
   const cartItemCount = useSelector((state) => state.cart.itemCount);
+  const wishlistItemCount = useSelector((state) => state.wishlist.items.length);
 
   return (
     <Nav className="align-items-center">
@@ -66,6 +68,25 @@ const SearchAndCart = () => {
           </Button>
         </InputGroup>
       </Form>
+      <LinkContainer to="/wishlist">
+        <Nav.Link as="div" className="ms-lg-3 mt-2 mt-lg-0">
+          <Button
+            variant="outline-light"
+            className="d-flex align-items-center position-relative"
+            aria-label={`Wishlist with ${wishlistItemCount} items`}
+          >
+            <Heart size={20} />
+            {wishlistItemCount > 0 && (
+              <Badge
+                pill
+                bg="danger"
+                className="position-absolute top-0 start-100 translate-middle"
+                style={{ fontSize: "0.8em", padding: "0.4em 0.6em" }}
+              >{wishlistItemCount}</Badge>
+            )}
+          </Button>
+        </Nav.Link>
+      </LinkContainer>
       <LinkContainer to="/cart">
         <Nav.Link as="div" className="ms-lg-3 mt-2 mt-lg-0">
           <Button
