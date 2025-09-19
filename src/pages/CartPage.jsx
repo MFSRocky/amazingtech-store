@@ -6,7 +6,7 @@ import {
   clearCart,
 } from "../store/slices/cartSlice";
 import { Link } from "react-router-dom";
-import "./cartpage.css";
+import "../pages/CartPage.css"
 
 function CartItem({ item }) {
   const dispatch = useDispatch();
