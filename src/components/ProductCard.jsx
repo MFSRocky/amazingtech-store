@@ -2,7 +2,7 @@ import { ShoppingCart, Heart } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../store/slices/cartSlice";
 import { toggleWishlist, selectIsItemInWishlist } from "../store/slices/wishlistSlice";
-import "./ProductCard.css";
+import "../components/ProductCard.css";
 import { Link } from "react-router-dom";
 
 export default function ProductCard({ id, title, image, description, price }) {

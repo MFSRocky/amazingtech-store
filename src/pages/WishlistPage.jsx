@@ -2,8 +2,8 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { selectWishlistItems } from '../store/slices/wishlistSlice';
-import './CategoryPage.css'; // Reusing styles for consistency
-import './cartpage.css'; // Reusing styles for empty page message
+import '../pages/CategoryPage.css'; 
+import '../pages/Cartpage.css'; 
 
 export default function WishlistPage() {
   const wishlistItems = useSelector(selectWishlistItems);

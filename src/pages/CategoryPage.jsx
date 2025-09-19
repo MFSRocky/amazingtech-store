@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
-import "./CategoryPage.css";
+import "../pages/CategoryPage.css";
 
 export default function CategoryPage() {
   const { category } = useParams();
