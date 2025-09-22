@@ -55,8 +55,6 @@ export default function Contact() {
                       placeholder="Type your message here..."
                     />
                   </Form.Group>
-
-                  
                   <NiceButton/>
                 </Form>
               </Col>
