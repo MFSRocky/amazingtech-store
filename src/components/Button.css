@@ -1,0 +1,24 @@
+.nice-button {
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  position: relative;
+  padding: 15px 30px;
+  border: #20c997;
+  border-radius: 0px;
+  cursor: pointer;
+}
+.nice-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #20c997; 
+  z-index: -1;
+  transition: all cubic-bezier(0.5, 1.6, 0.4, 0.7) 0.5s;
+  border-radius: 0x;
+}
+.nice-button:hover::before {
+  width: 100%;
+}

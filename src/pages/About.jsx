@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 export default function About() {
   return (
-    <Container className="my-5">
+    <Container className="about">
       <Row className="justify-content-center">
         <Col md={8}>
           <Card className="p-4 shadow-lg rounded-3">

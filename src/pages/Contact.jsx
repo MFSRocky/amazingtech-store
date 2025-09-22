@@ -1,5 +1,6 @@
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { Mail, Phone, MapPin } from "lucide-react";
+import NiceButton from "../components/Button";
 import "../pages/Contact.css";
 
 export default function Contact() {
@@ -23,11 +24,11 @@ export default function Contact() {
                     <Mail className="me-2 text-primary" /> support@amazingtech.com
                   </li>
                   <li className="mb-3 d-flex align-items-center">
-                    <Phone className="me-2 text-primary" /> +1 (800) 123-4567
+                    <Phone className="me-2 text-primary" /> +20 (010) 123-4567
                   </li>
                   <li className="mb-3 d-flex align-items-center">
                     <MapPin className="me-2 text-primary" /> 123 Tech Street,
-                    Innovation City, USA
+                    Innovation City, Egypt
                   </li>
                 </ul>
               </Col>
@@ -55,9 +56,8 @@ export default function Contact() {
                     />
                   </Form.Group>
 
-                  <Button variant="primary" type="submit">
-                    Send Message
-                  </Button>
+                  
+                  <NiceButton/>
                 </Form>
               </Col>
             </Row>

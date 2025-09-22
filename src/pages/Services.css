@@ -1,3 +1,16 @@
 .services {
-    margin-top: 200px;
+    margin: 180px 0;
+}
+
+.services h1 {
+    margin-bottom: 60px;
+}
+
+.service-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }

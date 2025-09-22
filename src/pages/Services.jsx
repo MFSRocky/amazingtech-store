@@ -32,11 +32,11 @@ export default function Services() {
 
   return (
     <Container className="services">
-      <h1 className="text-center mb-4">Our Services</h1>
+      <h1 className="text-center">Our Services</h1>
       <Row className="g-4">
         {services.map((service, index) => (
           <Col md={6} lg={3} key={index}>
-            <Card className="p-4 text-center shadow-lg rounded-3 h-100">
+            <Card className="p-4 text-center shadow-lg rounded-3 h-100 service-card">
               <div className="mb-3 text-primary">{service.icon}</div>
               <h4>{service.title}</h4>
               <p className="text-muted">{service.description}</p>
