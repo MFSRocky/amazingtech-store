@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ShoppingCart, Star, Heart } from "lucide-react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../store/slices/cartSlice";
-import { toggleWishlist, selectIsItemInWishlist } from "../store/slices/wishlistSlice";
 import "../pages/ProductDetails.css";
 
 export default function ProductDetails() {
@@ -12,15 +11,12 @@ export default function ProductDetails() {
   const [error, setError] = useState(null);
   const { id } = useParams();
   const dispatch = useDispatch();
-  const isInWishlist = useSelector(state => selectIsItemInWishlist(state, Number(id)));
 
   const handleAddToCart = () => {
     dispatch(addToCart(product));
   };
 
-  const handleToggleWishlist = () => {
-    dispatch(toggleWishlist(product));
-  };
+
 
   useEffect(() => {
     async function getProduct() {
@@ -74,13 +70,6 @@ export default function ProductDetails() {
             <button className="btn btn-primary btn-lg d-flex align-items-center" onClick={handleAddToCart}>
               <ShoppingCart size={22} className="me-2" />
               Add to Cart
-            </button>
-            <button
-              className={`btn btn-outline-danger btn-lg d-flex align-items-center ${isInWishlist ? 'active' : ''}`}
-              onClick={handleToggleWishlist}
-              aria-label={isInWishlist ? 'Remove from wishlist' : 'Add to wishlist'}
-            >
-              <Heart size={22} fill={isInWishlist ? 'currentColor' : 'none'} />
             </button>
           </div>
         </div>

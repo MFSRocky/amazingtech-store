@@ -6,7 +6,6 @@ import ProductDetails from './pages/ProductDetails.jsx';
 import CategoryPage from './pages/CategoryPage.jsx';
 import CartPage from './pages/CartPage.jsx';
 import Services from './pages/Services.jsx';
-import WishlistPage from './pages/WishlistPage.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -21,7 +20,6 @@ function App() {
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/wishlist" element={<WishlistPage />} />
           <Route path="*" element={<div>404 - Page not found</div>} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
