@@ -4,7 +4,7 @@
   position: relative;
   padding: 15px 30px;
   border: #20c997;
-  border-radius: 0px;
+  border-radius: 0px !important;
   cursor: pointer;
 }
 .nice-button::before {
@@ -17,7 +17,7 @@
   background-color: #20c997; 
   z-index: -1;
   transition: all cubic-bezier(0.5, 1.6, 0.4, 0.7) 0.5s;
-  border-radius: 0x;
+  border-radius: 0px !important;
 }
 .nice-button:hover::before {
   width: 100%;
